@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="project">
+
+  <browser:page
+    for="*"
+    name="add_row_to_db"
+    class=".add_row_to_db.AddRowView"
+    permission="cmf.ManagePortal"
+  />
+
+</configure>
