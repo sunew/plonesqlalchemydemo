@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="project">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="project profile"
+      directory="profiles/default"
+      description='Extension profile for the "project" module.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:importStep
+      name="project.various"
+      title="project: miscellaneous import steps"
+      description="Various import steps that are not handled by GS import/export handlers."
+      handler="project.setuphandlers.setupVarious">
+  </genericsetup:importStep>
+
+
+</configure>

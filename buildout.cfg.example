@@ -1,0 +1,7 @@
+[buildout]
+#extends = profiles/project.cfg
+#extends = profiles/production.cfg
+#extends = profiles/testserver.cfg
+#extends = profiles/devserver.cfg
+extends = profiles/development.cfg
+

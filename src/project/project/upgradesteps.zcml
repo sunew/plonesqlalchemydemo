@@ -1,0 +1,15 @@
+<configure xmlns="http://namespaces.zope.org/zope"
+           xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
+
+  <genericsetup:upgradeSteps
+     profile="project:default"
+     source="1000"
+     destination="1001">
+    <genericsetup:upgradeStep
+      handler=".upgradesteps.setupDb"
+      title="Setting up db tables"
+      description=""
+      />
+  </genericsetup:upgradeSteps>
+
+</configure>
