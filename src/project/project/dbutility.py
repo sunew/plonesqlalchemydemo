@@ -6,14 +6,14 @@ from z3c.saconfig import EngineFactory
 
 DEBUG = True
 
-username = 'zitelab'
+username = 'plonesqldemo'
 password = 'AwaymWad0'
 host = '127.0.0.1'
 port = '3306'
-database = 'zitelabtest'
-database2 = 'zitelabtest'
+database = 'plonesqldemo'
+database2 = 'plonesqldemo'
 
-ZitelabDBEngine1 = EngineFactory(
+DemoDBEngine1 = EngineFactory(
     'mysql://%s:%s@%s:%s/%s' % (
         username,
         password,
@@ -24,10 +24,10 @@ ZitelabDBEngine1 = EngineFactory(
     convert_unicode=True,
     pool_recycle=3600)
 
-ZitelabDBSession1 = GloballyScopedSession(engine='zitelab_test_engine_1')
+DemoDBSession1 = GloballyScopedSession(engine='demo_engine_1')
 
 # This one could be to a different database:
-ZitelabDBEngine2 = EngineFactory(
+DemoDBEngine2 = EngineFactory(
     'mysql://%s:%s@%s:%s/%s' % (
         username,
         password,
@@ -38,4 +38,4 @@ ZitelabDBEngine2 = EngineFactory(
     convert_unicode=True,
     pool_recycle=3600)
 
-ZitelabDBSession2 = GloballyScopedSession(engine='zitelab_test_engine_2')
+DemoDBSession2 = GloballyScopedSession(engine='demo_engine_2')

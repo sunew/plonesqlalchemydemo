@@ -20,17 +20,17 @@
   <!-- THE FIRST WAY - Configuring connection params in zcml -->
 
   <!-- Local DB: (the normal case) -->
-  <db:engine name="zcmlengine" url="mysql://zitelab:AwaymWad0@localhost/zitelabtest" convert_unicode="true" pool_recycle="3600" echo="true"/>
+  <db:engine name="zcmlengine" url="mysql://plonesqldemo:AwaymWad0@localhost/plonesqldemo" convert_unicode="true" pool_recycle="3600" echo="true"/>
 
   <!-- for debugging, with sql echo: -->
   <!--
-    <db:engine name="zcmlengine" url="mysql://zitelab:AwaymWad0@localhost/zitelabtest" convert_unicode="true" pool_recycle="3600" echo="true"/>
+    <db:engine name="zcmlengine" url="mysql://plonesqldemo:AwaymWad0@localhost/plonesqldemo" convert_unicode="true" pool_recycle="3600" echo="true"/>
   -->
 
   <!-- From developer machine to Live DB via tunnel on port 3313 -
        do not change data! And do not upload this config to server. -->
   <!--
-    <db:engine name="zcmlengine" url="mysql://zitelab:AwaymWad0@127.0.0.1:3307/zitelabtest" convert_unicode="true" pool_recycle="3600"/>
+    <db:engine name="zcmlengine" url="mysql://plonesqldemo:AwaymWad0@127.0.0.1:3307/plonesqldemo" convert_unicode="true" pool_recycle="3600"/>
   -->
 
   <db:session name="zcmlsession" engine="zcmlengine" />
@@ -41,22 +41,22 @@
 
   <utility
     provides="z3c.saconfig.interfaces.IEngineFactory"
-    name="zitelab_test_engine_1"
-    component=".dbutility.ZitelabDBEngine1" />
+    name="demo_engine_1"
+    component=".dbutility.DemoDBEngine1" />
 
   <utility
     provides="z3c.saconfig.interfaces.IScopedSession"
-    name="zitelab_test_session_1"
-    component=".dbutility.ZitelabDBSession1" />
+    name="demo_session_1"
+    component=".dbutility.DemoDBSession1" />
 
   <utility
     provides="z3c.saconfig.interfaces.IEngineFactory"
-    name="zitelab_test_engine_2"
-    component=".dbutility.ZitelabDBEngine2" />
+    name="demo_engine_2"
+    component=".dbutility.DemoDBEngine2" />
 
   <utility
     provides="z3c.saconfig.interfaces.IScopedSession"
-    name="zitelab_test_session_2"
-    component=".dbutility.ZitelabDBSession2" />
+    name="demo_session_2"
+    component=".dbutility.DemoDBSession2" />
 
 </configure>
