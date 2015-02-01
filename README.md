@@ -35,4 +35,8 @@ A testuser and a schema is created.
 
 2) run the buildout: installs a fresh plone and the needed modules. Look in profiles.cfg and versions.cfg
 
-3) Start plone, install the 'project' module. This creates the demo tabel in mysql
+3) Start plone. Install the 'project' module via the plone control panel. This creates the demo table in the mysql demo database.
+
+4) read the code, play with the three demo browser views.
+
+
