@@ -6,16 +6,16 @@
 
   <browser:page
     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-    name="reflection-view"
-    class=".usingreflection.MyView"
+    name="orm-view"
+    class=".ORM_example.ORMView"
     permission="cmf.ManagePortal"
     layer="..interfaces.IProjectLayer"
   />
 
   <browser:page
     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-    name="model-view"
-    class=".usingmodel.MyView"
+    name="reflection-view"
+    class=".reflection_example.ReflectionView"
     permission="cmf.ManagePortal"
     layer="..interfaces.IProjectLayer"
   />
@@ -23,7 +23,7 @@
   <browser:page
     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
     name="sessionutility-view"
-    class=".usingsessionutility.MyView"
+    class=".sessionutility_example.Reflection2View"
     permission="cmf.ManagePortal"
     layer="..interfaces.IProjectLayer"
   />

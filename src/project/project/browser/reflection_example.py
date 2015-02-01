@@ -20,14 +20,14 @@ def get_table(session, name):
     return Base.metadata.tables[name]
 
 
-class MyView(BrowserView):
+class ReflectionView(BrowserView):
 
-    template = ViewPageTemplateFile('templates/usingmodel.pt')
+    template = ViewPageTemplateFile('templates/view.pt')
 
     label = u'Using SQLAlchemy reflection'
 
     def __init__(self, context, request):
-        super(MyView, self).__init__(context, request)
+        super(ReflectionView, self).__init__(context, request)
 
     def __call__(self):
         self.status = IStatusMessage(self.request)

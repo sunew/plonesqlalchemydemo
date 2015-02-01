@@ -11,14 +11,14 @@ from project.model.testdata import TestData
 Session = named_scoped_session('zcmlsession')
 
 
-class MyView(BrowserView):
+class ORMView(BrowserView):
 
-    template = ViewPageTemplateFile('templates/usingmodel.pt')
+    template = ViewPageTemplateFile('templates/view.pt')
 
     label = u'Using SQLAlchemy model'
 
     def __init__(self, context, request):
-        super(MyView, self).__init__(context, request)
+        super(ORMView, self).__init__(context, request)
 
     def __call__(self):
         self.status = IStatusMessage(self.request)
