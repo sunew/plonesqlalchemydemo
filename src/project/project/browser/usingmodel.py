@@ -8,7 +8,7 @@ from z3c.saconfig import named_scoped_session
 
 from project.model.testdata import TestData
 
-Session = named_scoped_session('projectsession')
+Session = named_scoped_session('zcmlsession')
 
 
 class MyView(BrowserView):

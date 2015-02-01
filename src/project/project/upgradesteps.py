@@ -33,7 +33,7 @@ def runDefaultProfile(tool):
 def setupDb(tool):
     """ """
     site = tool.aq_parent
-    factory = component.getUtility(IEngineFactory, name="projectengine")
+    factory = component.getUtility(IEngineFactory, name="zcmlengine")
     engine = factory()
     Base.metadata.create_all(engine)
     log.info("Setup project db tables")

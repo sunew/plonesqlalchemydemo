@@ -9,7 +9,7 @@ from z3c.saconfig import named_scoped_session
 from zope.sqlalchemy import mark_changed
 
 Base = declarative_base()
-Session = named_scoped_session('zcmlsession')
+Session = named_scoped_session('zitelab_test_session_1')
 
 
 def get_table(session, name):

@@ -2,6 +2,6 @@
 from sqlalchemy.ext.declarative import declarative_base
 from z3c.saconfig import named_scoped_session
 
-Session = named_scoped_session("projectsession")
+Session = named_scoped_session("zcmlsession")
 
 Base = declarative_base()
