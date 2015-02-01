@@ -20,7 +20,7 @@
   <!-- THE FIRST WAY - Configuring connection params in zcml -->
 
   <!-- Local DB: (the normal case) -->
-  <db:engine name="zcmlengine" url="mysql://plonesqldemo:AwaymWad0@localhost/plonesqldemo" convert_unicode="true" pool_recycle="3600" echo="true"/>
+  <db:engine name="zcmlengine" url="mysql://plonesqldemo:AwaymWad0@localhost/plonesqldemo" convert_unicode="true" pool_recycle="3600"/>
 
   <!-- for debugging, with sql echo: -->
   <!--

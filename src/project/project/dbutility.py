@@ -4,7 +4,7 @@ from z3c.saconfig import EngineFactory
 # Here you can get the parameters like username and password, database, etc.
 # Will be processed on zope startup.
 
-DEBUG = True
+DEBUG = False
 
 username = 'plonesqldemo'
 password = 'AwaymWad0'
