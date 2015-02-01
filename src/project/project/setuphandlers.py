@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from logging import getLogger
 from Products.GenericSetup.upgrade import _upgrade_registry
 from zope import component

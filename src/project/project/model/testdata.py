@@ -39,7 +39,7 @@ class TestData(Base):
     row_id = Column(Integer, Sequence(__tablename__ + "_row_id"),
                     primary_key=True)
 
-    my_first_field = Column(Integer, nullable=False, unique=True, index=True)
+    my_first_field = Column(Integer, nullable=False)
     my_second_field = Column(String(500), nullable=False)
     my_third_field = Column(String(2000))
 

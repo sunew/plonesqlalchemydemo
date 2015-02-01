@@ -1,0 +1,50 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master">
+<head>
+    <metal:noborder fill-slot="top_slot"
+                 tal:define="dummy python:request.set('disable_border',1);
+                            disable_column_one python:request.set('disable_plone.leftcolumn',1);
+                            disable_column_two python:request.set('disable_plone.rightcolumn',1);"/>
+</head>
+<body>
+
+<metal:slot metal:fill-slot="header" i18n:domain="cmf_default">
+  <h1 class="documentFirstHeading" tal:content="view/label">View Title</h1>
+</metal:slot>
+
+<metal:slot metal:fill-slot="main" i18n:domain="cmf_default">
+
+    <p tal:repeat="row view/rows"
+          tal:content="row">
+    </p>
+
+    <form action="."
+          tal:attributes="action request/URL;"
+          method="post"
+          name="myform"
+          id="myform">
+
+      <input type="hidden" name="submitted" value="1" />
+      <input tal:replace="structure context/@@authenticator/authenticator" />
+
+      <div id="actionsView" class="formControls">
+        <span class="actionButtons">
+          <input class="context"
+                 type="submit"
+                 name="add_row"
+                 value="Add row with dummy data"
+                 />
+          </span>
+      </div>
+
+    </form>
+
+</metal:slot>
+
+</body>
+</html>
+

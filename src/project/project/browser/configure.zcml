@@ -5,10 +5,19 @@
     i18n_domain="project">
 
   <browser:page
-    for="*"
-    name="add_row_to_db"
-    class=".add_row_to_db.AddRowView"
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    name="reflection-view"
+    class=".usingreflection.MyView"
     permission="cmf.ManagePortal"
+    layer="..interfaces.IProjectLayer"
+  />
+
+  <browser:page
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    name="model-view"
+    class=".usingmodel.MyView"
+    permission="cmf.ManagePortal"
+    layer="..interfaces.IProjectLayer"
   />
 
 </configure>
